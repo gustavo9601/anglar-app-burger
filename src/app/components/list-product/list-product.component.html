@@ -1,0 +1,19 @@
+<div class="row" id="products">
+  <div class="col-12">
+    <div class="row" *ngIf="listProducts?.length === 0">
+      <div class="col-12 text-center" >
+        <span>{{'label.no.products' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="row product" *ngIf="listProducts?.length > 0">
+      <div class="col-md-4 col-sm-6  col-12"
+           (click)="selectProduct(produt)"
+           *ngFor="let produt of listProducts">
+        <img [src]="produt.img" class="img-medium" alt="">
+        <span class="d-block">{{produt.name | translate}}</span>
+        <span class="d-block">{{produt.price}}</span>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="row" id="categories">
+  <div class="col-12">
+    <div class="row" *ngIf="listCategories?.length === 0">
+      <div class="col-12 text-center">
+        <span>{{'label.no.categories' | translate}}</span>
+      </div>
+    </div>
+
+    <div class="row" *ngIf="listCategories?.length > 0">
+      <div class="col-md-4 col-sm-6 col-12 category"
+           (click)="selectCategory(categorie)"
+           *ngFor="let categorie of listCategories">
+        <img [src]="categorie.img" alt="" class="img-medium">
+        <span class="d-block">{{'cat-name' | translate}}</span>
+      </div>
+    </div>
+  </div>
+</div>

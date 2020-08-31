@@ -1,0 +1,13 @@
+#header .c-pointer{
+  cursor: pointer;
+}
+
+#header{
+  background: #2764a5;
+}
+
+.img-logo{
+  background: white;
+  width: 120px;
+  padding: 5px;
+}
