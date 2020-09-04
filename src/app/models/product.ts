@@ -29,8 +29,45 @@ export class Product implements IProduct {
 
   // Usado para modificar el valor  de la cantidad, cuando se aumente o se decrementa
   set quantity(value: number) {
-     _.set(this, 'data.quantity', value);
+    _.set(this, 'data.quantity', value);
   }
 
+
+  getExtras() {
+    const extras = [];
+    _.forEach(this.extras, extra => {
+      const products = extra.products;
+
+      _.forEach(products, product => {
+        if (product.optionSelected) {
+          extras.push({
+            'name': product.name,
+            'selected': product.optionSelected.name
+          });
+        } else if (product.options[0].activate) {
+          extra.push({
+            'name': product.name
+          });
+        }
+      });
+    });
+  }
+
+  totalPrice() {
+    let total = this.price;
+
+    _.forEach(this.extras, extra => {
+      const products = extra.products;
+
+      _.forEach(products, product => {
+        if (product.optionSelected) {
+          total += product.optionSelected.price;
+        } else if (product.options[0].activate) {
+          total += product.options[0].price;
+        }
+      });
+    });
+    return total;
+  }
 
 }

@@ -6,3 +6,59 @@
 #product .extra{
   font-size: 22px;
 }
+
+
+.block-price{
+  font-size: 36px;
+}
+
+#product ::ng-deep .mat-checkbox-frame,
+#product ::ng-deep .mat-checkbox-background
+{
+  border-radius: 50%;
+}
+
+#product ::ng-deep .mat-checkbox-background svg{
+  display: none;
+}
+
+#product ::ng-deep .mat-checkbox-inner-container,
+#product ::ng-deep .mat-radio-container,
+#product ::ng-deep .mat-radio-outlet-circle,
+#product ::ng-deep .mat-radio-inner-circle
+{
+  width: 60px;
+  height: 60px;
+}
+
+#product ::ng-deep .mat-checkbox-background{
+  margin: 5px;
+}
+
+#product ::ng-deep .mat-radio-checked .mat-radio-inner-circle{
+  transform: scale(0.8);
+}
+
+::ng-deep #block-radio{
+  position: relative;
+padding-top: 30px;
+}
+
+#product ::ng-deep .mat-radio-label-content{
+  position: absolute;
+  top: -30px;
+}
+
+/* Desde 768 px hacia arriba */
+@media (min-width: 768px) {
+  ::ng-deep #block-radio{
+   width: 75%;
+  }
+}
+
+/* Desde 768 px hacia abajo */
+@media (max-width: 768px) {
+  ::ng-deep #block-radio{
+    width: 50%;
+  }
+}

@@ -55,4 +55,9 @@ export class ProductService {
   set productSelected(value: Product) {
     this._productSelected = value;
   }
+
+
+  resetProducts(){
+    this._data = _.cloneDeep(this._dataOriginal);
+  }
 }

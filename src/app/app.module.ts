@@ -22,6 +22,7 @@ import {ProductService} from './services/product.service';
 import { ListCategoriesComponent } from './components/list-categories/list-categories.component';
 import { ListProductComponent } from './components/list-product/list-product.component';
 import { ProductComponent } from './components/product/product.component';
+import { ProductsOrderComponent } from './components/products-order/products-order.component';
 
 
 export function translateFactory(provider: TranslateService) {
@@ -40,7 +41,8 @@ export function productFactory(provider: ProductService) {
     FooterComponent,
     ListCategoriesComponent,
     ListProductComponent,
-    ProductComponent
+    ProductComponent,
+    ProductsOrderComponent
   ],
   imports: [
     BrowserModule,

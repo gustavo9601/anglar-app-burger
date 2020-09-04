@@ -4,3 +4,11 @@
   cursor: pointer;
   font-size: 36px;
 }
+
+#products{
+  font-size: 36px;
+}
+
+#order i.fa{
+  cursor: pointer;
+}
